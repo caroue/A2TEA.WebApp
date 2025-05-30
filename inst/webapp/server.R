@@ -1496,7 +1496,7 @@ server <- function(input, output, session) {
       #           linetype = !!input$tea_log2FC_linetype_choice
       #         )
       #     )
-      # }
+      }
 
 
       #log2FC layer + significance stars
