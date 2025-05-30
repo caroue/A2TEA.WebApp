@@ -570,7 +570,7 @@ body <- dashboardBody(
                         uiOutput("tea_log2FC_n_break_options"),
                         uiOutput("tea_log2FC_axis_text_options"),
                         uiOutput("tea_log2FC_vjust_options"),
-                        uiOutput("tea_log2FC_linetype_options"),
+                        uiOutput("tea_log2FC_linetype_options")
                       ),
                       fluidRow(
                         # row 2 - column 1 (only 1)
