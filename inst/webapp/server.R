@@ -1531,6 +1531,7 @@ server <- function(input, output, session) {
               axis.params =
                 list(
                   axis = "x",
+                  title= "log2FC",
                   text.size = !!input$tea_log2FC_axis_text_choice,
                   # nbreak - variable or function accepted here?
                   nbreak = !!input$tea_log2FC_n_break_choice, #input$nbreak_choice,
@@ -1559,11 +1560,13 @@ server <- function(input, output, session) {
             colour = "darkgray",
             alpha = .5,
             inherit.aes = FALSE,
-            offset = 2*(input$tea_log2FC_offset_choice),
+            offset = 1.5*(input$tea_log2FC_offset_choice),
             pwidth = input$tea_log2FC_pwidth_choice,
             axis.params = list(
               axis = "x",
+              title= "baseMean",
               text.size = !!input$tea_log2FC_axis_text_choice,
+              text.angle = 90,
               nbreak = !!input$tea_log2FC_n_break_choice,
               line.size = 0.5,
               vjust = !!input$tea_log2FC_vjust_choice,
@@ -1580,7 +1583,7 @@ server <- function(input, output, session) {
               data=tree_dge_only_sig,
               geom = geom_star,
               mapping = aes(y=gene, x=log2FoldChange, fill=significant),
-              offset = input$tea_log2FC_offset_choice,
+              offset = .5 * input$tea_log2FC_offset_choice,
               size = 4,
               color = "orange",
               starstroke = 1

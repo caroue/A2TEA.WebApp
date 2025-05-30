@@ -601,7 +601,7 @@ body <- dashboardBody(
                             ),
                             splitLayout(
                               checkboxInput(inputId = "log2FC_layer",
-                                            label = "Add baseMean and log2FC layer",
+                                            label = "Add log2FC and baseMean",
                                             value = TRUE
                               ),
                               checkboxInput(inputId = "tea_log2FC_add_sign_stars_choice",
@@ -614,7 +614,7 @@ body <- dashboardBody(
                               uiOutput("tea_log2FC_pwidth_options"),
                             ),
                             checkboxInput(inputId = "msa_layer",
-                                          label = "Add MSA layer - only recommended for NON-circular views",
+                                          label = "Add MSA - only recommended for NON-circular views",
                                           value = FALSE),
                             uiOutput("tea_msa_width_options"),
                             splitLayout(
