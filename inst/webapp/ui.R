@@ -601,12 +601,12 @@ body <- dashboardBody(
                             ),
                             splitLayout(
                               checkboxInput(inputId = "log2FC_layer",
-                                            label = "Add log2FC layer",
-                                            value = FALSE
+                                            label = "Add baseMean and log2FC layer",
+                                            value = TRUE
                               ),
                               checkboxInput(inputId = "tea_log2FC_add_sign_stars_choice",
                                             label = "Mark significant DEGs",
-                                            value = FALSE
+                                            value = TRUE
                               ),
                             ),
                             splitLayout(
